@@ -28,13 +28,15 @@ function animate() {
 
     //bloorect
     c.fillstyle = '#92ABEA'
-    c.fillRect(canvas.width / 2 - 50, canvas.height / 2 - 50, 100, 100) 
+    c.fillRect(canvas.width / 2 - 50, canvas.height / 2 - 50, 100, 100)
 
+    const blueRectX = canvas.width / 2 - 50 + 100
+    const blueRectY = canvas.height / 2 - 50 + 100
     //need a condition in the animate loop
-    if(mouse.x + 100 >= canvas.width / 2 - 50  &&
-       mouse.x <= canvas.width / 2 - 50 + 100  &&
-       mouse.y + 100 >= canvas.height / 2 - 50 &&
-       mouse.y <= canvas.height / 2 - 50 + 100){
+    if(mouse.x + 100 >= blueRectX  &&
+       mouse.x <= blueRectX        &&
+       mouse.y + 100 >= blueRectY  &&
+       mouse.y <= blueRectY){
         console.log('colliding');
     }
 }
