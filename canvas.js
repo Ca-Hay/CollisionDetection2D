@@ -1,6 +1,5 @@
 var canvas = document.querySelector('canvas'
 )
-
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -10,7 +9,7 @@ canvas.height = innerHeight
 
 const mouse = {
     x: innerWidth / 2,
-    y: innerHeight /2
+    y: innerHeight / 2
 }
 
 //Events
@@ -31,8 +30,9 @@ function animate() {
        mouse.y + 100 >= canvas.height / 2 - 50 &&
        mouse.y <= canvas.height / 2 - 50 + 100
        ){
-           console.log("i am colliding")
-           
+        collision = 1;
+    } else {
+        collision = 0;
     }
 
     //redrect
